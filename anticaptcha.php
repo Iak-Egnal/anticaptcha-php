@@ -1,5 +1,7 @@
 <?php
 
+namespace Anticaptcha\Php;
+
 interface AntiCaptchaTaskProtocol {
     
     public function getPostData();

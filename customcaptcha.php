@@ -1,5 +1,7 @@
 <?php
 
+namespace Anticaptcha\Php;
+
 class CustomCaptcha extends Anticaptcha implements AntiCaptchaTaskProtocol {
 
     private $imageUrl;

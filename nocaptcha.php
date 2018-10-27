@@ -1,5 +1,7 @@
 <?php
 
+namespace Anticaptcha\Php;
+
 class NoCaptcha extends Anticaptcha implements AntiCaptchaTaskProtocol {
 
     private $websiteUrl;

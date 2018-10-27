@@ -1,5 +1,7 @@
 <?php
 
+namespace Anticaptcha\Php;
+
 class GeeTest extends Anticaptcha implements AntiCaptchaTaskProtocol {
 
     private $websiteUrl;
