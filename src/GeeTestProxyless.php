@@ -1,6 +1,6 @@
 <?php
 
-namespace Anticaptcha;
+namespace Iakanticaptcha;
 
 class GeeTestProxyless extends Anticaptcha implements AntiCaptchaTaskProtocol {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Anticaptcha;
+namespace Iakanticaptcha;
 
 class CustomCaptcha extends Anticaptcha implements AntiCaptchaTaskProtocol {
 

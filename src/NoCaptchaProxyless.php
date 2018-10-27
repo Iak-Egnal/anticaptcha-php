@@ -1,6 +1,6 @@
 <?php
 
-namespace Anticaptcha;
+namespace Iakanticaptcha;
 
 class NoCaptchaProxyless extends Anticaptcha implements AntiCaptchaTaskProtocol {
 

@@ -1,12 +1,11 @@
 <?php
 
-namespace Anticaptcha;
+namespace Iakanticaptcha;
 
-class GeeTest extends Anticaptcha implements AntiCaptchaTaskProtocol {
+class FunCaptcha extends Anticaptcha implements AntiCaptchaTaskProtocol {
 
     private $websiteUrl;
-    private $websiteKey;
-    private $websiteChallenge;
+    private $websitePublicKey;
     private $proxyType = "http";
     private $proxyAddress;
     private $proxyPort;
@@ -17,38 +16,29 @@ class GeeTest extends Anticaptcha implements AntiCaptchaTaskProtocol {
     
     public function getPostData() {
         return array(
-            "type"          =>  "GeeTestTask",
-            "websiteURL"    =>  $this->websiteUrl,
-            "gt"            =>  $this->websiteKey,
-            "challenge"     =>  $this->websiteChallenge,
-            "proxyType"     =>  $this->proxyType,
-            "proxyAddress"  =>  $this->proxyAddress,
-            "proxyPort"     =>  $this->proxyPort,
-            "proxyLogin"    =>  $this->proxyLogin,
-            "proxyPassword" =>  $this->proxyPassword,
-            "userAgent"     =>  $this->userAgent,
-            "cookies"       =>  $this->cookies
+            "type"              =>  "FunCaptchaTask",
+            "websiteURL"        =>  $this->websiteUrl,
+            "websitePublicKey"  =>  $this->websitePublicKey,
+            "proxyType"         =>  $this->proxyType,
+            "proxyAddress"      =>  $this->proxyAddress,
+            "proxyPort"         =>  $this->proxyPort,
+            "proxyLogin"        =>  $this->proxyLogin,
+            "proxyPassword"     =>  $this->proxyPassword,
+            "userAgent"         =>  $this->userAgent,
+            "cookies"           =>  $this->cookies
         );
     }
     
-    public function setTaskInfo($taskInfo) {
-        $this->taskInfo = $taskInfo;
-    }
-    
     public function getTaskSolution() {
-        return $this->taskInfo->solution;
+        return $this->taskInfo->solution->token;
     }
     
     public function setWebsiteURL($value) {
         $this->websiteUrl = $value;
     }
     
-    public function setGTKey($value) {
-        $this->websiteKey = $value;
-    }
-    
-    public function setChallenge($value) {
-        $this->websiteChallenge = $value;
+    public function setWebsitePublicKey($value) {
+        $this->websitePublicKey = $value;
     }
     
     public function setProxyType($value) {

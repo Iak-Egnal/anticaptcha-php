@@ -1,12 +1,12 @@
 <?php
 
-namespace Anticaptcha;
+namespace Iakanticaptcha;
 
-class NoCaptcha extends Anticaptcha implements AntiCaptchaTaskProtocol {
+class GeeTest extends Anticaptcha implements AntiCaptchaTaskProtocol {
 
     private $websiteUrl;
     private $websiteKey;
-    private $websiteSToken;
+    private $websiteChallenge;
     private $proxyType = "http";
     private $proxyAddress;
     private $proxyPort;
@@ -17,10 +17,10 @@ class NoCaptcha extends Anticaptcha implements AntiCaptchaTaskProtocol {
     
     public function getPostData() {
         return array(
-            "type"          =>  "NoCaptchaTask",
+            "type"          =>  "GeeTestTask",
             "websiteURL"    =>  $this->websiteUrl,
-            "websiteKey"    =>  $this->websiteKey,
-            "websiteSToken" =>  $this->websiteSToken,
+            "gt"            =>  $this->websiteKey,
+            "challenge"     =>  $this->websiteChallenge,
             "proxyType"     =>  $this->proxyType,
             "proxyAddress"  =>  $this->proxyAddress,
             "proxyPort"     =>  $this->proxyPort,
@@ -36,19 +36,19 @@ class NoCaptcha extends Anticaptcha implements AntiCaptchaTaskProtocol {
     }
     
     public function getTaskSolution() {
-        return $this->taskInfo->solution->gRecaptchaResponse;
+        return $this->taskInfo->solution;
     }
     
     public function setWebsiteURL($value) {
         $this->websiteUrl = $value;
     }
     
-    public function setWebsiteKey($value) {
+    public function setGTKey($value) {
         $this->websiteKey = $value;
     }
     
-    public function setWebsiteSToken($value) {
-        $this->websiteSToken = $value;
+    public function setChallenge($value) {
+        $this->websiteChallenge = $value;
     }
     
     public function setProxyType($value) {

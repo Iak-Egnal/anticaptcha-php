@@ -1,11 +1,12 @@
 <?php
 
-namespace Anticaptcha;
+namespace Iakanticaptcha;
 
-class FunCaptcha extends Anticaptcha implements AntiCaptchaTaskProtocol {
+class NoCaptcha extends Anticaptcha implements AntiCaptchaTaskProtocol {
 
     private $websiteUrl;
-    private $websitePublicKey;
+    private $websiteKey;
+    private $websiteSToken;
     private $proxyType = "http";
     private $proxyAddress;
     private $proxyPort;
@@ -16,29 +17,38 @@ class FunCaptcha extends Anticaptcha implements AntiCaptchaTaskProtocol {
     
     public function getPostData() {
         return array(
-            "type"              =>  "FunCaptchaTask",
-            "websiteURL"        =>  $this->websiteUrl,
-            "websitePublicKey"  =>  $this->websitePublicKey,
-            "proxyType"         =>  $this->proxyType,
-            "proxyAddress"      =>  $this->proxyAddress,
-            "proxyPort"         =>  $this->proxyPort,
-            "proxyLogin"        =>  $this->proxyLogin,
-            "proxyPassword"     =>  $this->proxyPassword,
-            "userAgent"         =>  $this->userAgent,
-            "cookies"           =>  $this->cookies
+            "type"          =>  "NoCaptchaTask",
+            "websiteURL"    =>  $this->websiteUrl,
+            "websiteKey"    =>  $this->websiteKey,
+            "websiteSToken" =>  $this->websiteSToken,
+            "proxyType"     =>  $this->proxyType,
+            "proxyAddress"  =>  $this->proxyAddress,
+            "proxyPort"     =>  $this->proxyPort,
+            "proxyLogin"    =>  $this->proxyLogin,
+            "proxyPassword" =>  $this->proxyPassword,
+            "userAgent"     =>  $this->userAgent,
+            "cookies"       =>  $this->cookies
         );
     }
     
+    public function setTaskInfo($taskInfo) {
+        $this->taskInfo = $taskInfo;
+    }
+    
     public function getTaskSolution() {
-        return $this->taskInfo->solution->token;
+        return $this->taskInfo->solution->gRecaptchaResponse;
     }
     
     public function setWebsiteURL($value) {
         $this->websiteUrl = $value;
     }
     
-    public function setWebsitePublicKey($value) {
-        $this->websitePublicKey = $value;
+    public function setWebsiteKey($value) {
+        $this->websiteKey = $value;
+    }
+    
+    public function setWebsiteSToken($value) {
+        $this->websiteSToken = $value;
     }
     
     public function setProxyType($value) {

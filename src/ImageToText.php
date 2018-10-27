@@ -1,6 +1,6 @@
 <?php
 
-namespace Anticaptcha;
+namespace Iakanticaptcha;
 
 class ImageToText extends Anticaptcha implements AntiCaptchaTaskProtocol {
 

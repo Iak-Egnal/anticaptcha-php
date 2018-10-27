@@ -19,21 +19,21 @@
   },
   "autoload": {
     "psr-4": {
-      "Anticaptcha\\": "src/"
+      "Iakanticaptcha\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "aliases": {
-        "NoCaptchaProxyless": "Anticaptcha\\NoCaptchaProxyless",
-        "NoCaptcha": "Anticaptcha\\NoCaptcha",
-        "ImageToText": "Anticaptcha\\ImageToText",
-        "GeeTestProxyless": "Anticaptcha\\GeeTestProxyless",
-        "GeeTest": "Anticaptcha\\GeeTest",
-        "FunCaptchaProxyless": "Anticaptcha\\FunCaptchaProxyless",
-        "FunCaptcha": "Anticaptcha\\FunCaptcha",
-        "CustomCaptcha": "Anticaptcha\\CustomCaptcha",
-        "Anticaptcha": "Anticaptcha\\Anticaptcha"
+        "NoCaptchaProxyless": "Iakanticaptcha\\NoCaptchaProxyless",
+        "NoCaptcha": "Iakanticaptcha\\NoCaptcha",
+        "ImageToText": "Iakanticaptcha\\ImageToText",
+        "GeeTestProxyless": "Iakanticaptcha\\GeeTestProxyless",
+        "GeeTest": "Iakanticaptcha\\GeeTest",
+        "FunCaptchaProxyless": "Iakanticaptcha\\FunCaptchaProxyless",
+        "FunCaptcha": "Iakanticaptcha\\FunCaptcha",
+        "CustomCaptcha": "Iakanticaptcha\\CustomCaptcha",
+        "Anticaptcha": "Iakanticaptcha\\Anticaptcha"
       }
     }
   }

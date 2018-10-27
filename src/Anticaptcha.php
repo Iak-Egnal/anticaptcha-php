@@ -1,6 +1,6 @@
 <?php
 
-namespace Anticaptcha\Php;
+namespace Iakanticaptcha;
 
 interface AntiCaptchaTaskProtocol {
     
