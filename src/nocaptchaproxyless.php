@@ -2,7 +2,9 @@
 
 namespace Anticaptcha\Php;
 
-class NoCaptchaProxyless extends Anticaptcha implements AntiCaptchaTaskProtocol {
+use Anticaptcha\Php;
+
+class NoCaptchaProxyless extends Php\Anticaptcha implements Php\AntiCaptchaTaskProtocol {
 
     private $websiteUrl;
     private $websiteKey;
