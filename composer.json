@@ -19,7 +19,22 @@
   },
   "autoload": {
     "psr-4": {
-      "Anticaptcha\\Php\\": "src/"
+      "Anticaptcha\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "aliases": {
+        "NoCaptchaProxyless": "Anticaptcha\\NoCaptchaProxyless",
+        "NoCaptcha": "Anticaptcha\\NoCaptcha",
+        "ImageToText": "Anticaptcha\\ImageToText",
+        "GeeTestProxyless": "Anticaptcha\\GeeTestProxyless",
+        "GeeTest": "Anticaptcha\\GeeTest",
+        "FunCaptchaProxyless": "Anticaptcha\\FunCaptchaProxyless",
+        "FunCaptcha": "Anticaptcha\\FunCaptcha",
+        "CustomCaptcha": "Anticaptcha\\CustomCaptcha",
+        "Anticaptcha": "Anticaptcha\\Anticaptcha"
+      }
     }
   }
 }
